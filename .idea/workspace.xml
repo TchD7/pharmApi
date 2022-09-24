@@ -4,6 +4,7 @@
     <list default="true" id="d1ac1a04-2dfa-4ccd-983e-cbb2f614c18b" name="Changes" comment="setting file modification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pharma/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pharma/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
