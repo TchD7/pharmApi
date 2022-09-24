@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1ac1a04-2dfa-4ccd-983e-cbb2f614c18b" name="Changes" comment="supression des indesirable">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pharma.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="d1ac1a04-2dfa-4ccd-983e-cbb2f614c18b" name="Changes" comment="supression des indesir">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharma/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharma/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pharma/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664026622664</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="supression des indesir">
+      <created>1664026785693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664026785693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="securisation du lien de connexion" />
     <MESSAGE value="supression des indesirable" />
-    <option name="LAST_COMMIT_MESSAGE" value="supression des indesirable" />
+    <MESSAGE value="supression des indesir" />
+    <option name="LAST_COMMIT_MESSAGE" value="supression des indesir" />
   </component>
 </project>
