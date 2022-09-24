@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TCHONDO </title>
+    <link rel="stylesheet" href="{% static './assets/css/style.css' %}">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+  </head>
+  <body>
+  <div class="container-fluid">
+    <img class="img-xs rounded-circle" src="{% static 'hero.png' %}" alt="">
+    <button type="submit"> <a href=" {% url 'signout' %}">Logout</a> </button>
+  </div>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row justify-content-between">
+                      <h4 class="card-title mb-1">Enregistrer Une Pharmacie</h4>
+                      {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }} ">{{ message }}</div>
+                      {% endfor %}
+
+
+                    </div>
+                    <form class="forms-sample" method="post" action= " ">
+                    {% csrf_token %}
+                      {% for form in form %}
+                      <div class="form-group">
+                        {{ form.label }}
+                        {{ form }}
+                      </div>
+
+                      {% endfor %}
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Save</button>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row ">
+             <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <h4 class="card-title mb-1">Listes Des Phcies De Lomé </h4>
+                  </div>
+                  <ul class="navbar-nav w-100">
+                    <li class="nav-item w-100">
+                      <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                        <input type="text" class="form-control" name="q" placeholder="Search Pharmacies">
+                        <!-- <button type="submit">Entrer</button> -->
+                      </form>
+                    </li>
+                  </ul>
+                  <div class="row">
+                    <div class="table-responsive">
+                      <table class="table ">
+                        <thead>
+                          <tr>
+                            <th> N. </th>
+                
+                            <th> Nom </th>
+                            <th>Description</th>
+                            <th> Delete</th>
+                            <th> update </th>
+                            <th>De garde</th>
+                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for p in pharm_list %}
+                          <tr>
+                            <td>{{forloop.counter}} </td>
+                            
+                            <td> {{p.name}} </td>
+                              <td> {{p.description|truncatechars:7}} </td>
+                            <td>
+                            
+                              <a href="delete/{{p.id}}" id="{{p.id}}">
+                              <div class="badge badge-outline-danger">
+                                 Delete</div>
+                                </a>
+                            </td>
+                            <td>
+                              <a class="" href="update/{{p.id}}" id="{{p.id}}">
+                              <div class="badge badge-outline-warning">Update</div></a>
+                            </td>
+                      
+                              <td>
+                                <a href="garde/{{p.id}}" id="{{p.id}}"><div class="badge badge-outline-success">Garde</div> </a>
+                            </td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pharmacies de garde</h4>
+                  <ul class="navbar-nav w-100">
+                    <li class="nav-item w-100">
+                      <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                        <input type="text" class="form-control" name="q" placeholder="Search Pharmacies">
+                      </form>
+                    </li>
+                  </ul>
+
+                  <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                    <div class="row">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th> N. </th>
+                              <th> Nom </th>
+                              <th> Action </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           {% for name in de_garde %}
+                          <tr>
+                            <td> {{forloop.counter}} </td>
+                              <td> {{name.pharm.name}}</td>
+                              <td>
+                
+                                <a href="delete_on_garde/{{name.pharm.id}}" id="{{name.pharm.id}}">
+                                  <div class="badge badge-outline-primary">Ejecter</div>
+                                  </a>
+                              </td>
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+
+  </body>
+</html>
