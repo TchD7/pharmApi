@@ -126,3 +126,4 @@ STATICFILES_DIRS =  [
 STATIC_ROOT = BASE_DIR / "staticfiles"
 AUTH_USER_MODEL = "accounts.manager"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+django_heroku.setting(locals())
