@@ -1,1 +1,1 @@
-web: gunicorn pharma.wsgi --log-file -
+web: gunicorn pharma.wsgi
