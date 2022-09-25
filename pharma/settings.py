@@ -70,13 +70,31 @@ WSGI_APPLICATION = 'pharma.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}'''
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'railway',
+
+        'USER': 'postgres',
+
+        'PASSWORD': '12zUN0D96vnL76TvGKmY',
+
+        'HOST': 'containers-us-west-56.railway.app',
+
+        'PORT': '5855',
+
 }
 
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -127,4 +145,4 @@ STATICFILES_DIRS =  [
 STATIC_ROOT = BASE_DIR / "staticfiles"
 AUTH_USER_MODEL = "accounts.manager"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-django_heroku.setting(locals())
+django_heroku.settings(locals())
